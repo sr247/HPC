@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
 
 void Mat2MatProduct(float **A, float **B, float **C, int n, int m){
 	
-	#pragma opm parallel for
+	#pragma omp parallel for 
 	for(int i = 0; i < n; i++){
 		for(int j = 0; j < m; j++){
 			for(int k = 0; k < n; k++){
@@ -33,7 +33,7 @@ void Mat2MatProduct(float **A, float **B, float **C, int n, int m){
 
 void sequentialMatMult4(const int &v){
 	
-	int n = 16;
+	int n = 1024;
 	float** A = (float**) malloc (n*sizeof(float*));
     float** B = (float**) malloc (n*sizeof(float*));
     float** C = (float**) malloc (n*sizeof(float*));

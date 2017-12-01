@@ -12,7 +12,6 @@ void printMat(float **, int);
 int main(int argc, char** argv) {
 
 	sequentialMatMult1(0);
-	
     return 0;
 }
 
